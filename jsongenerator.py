@@ -1,4 +1,4 @@
-import json
+import time
 
 gpsdata = {
   "acceleration_x": -0.3075714,

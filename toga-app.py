@@ -2,7 +2,7 @@
 # Imports the Google Cloud client library
 from google.cloud import pubsub_v1
 
-import toga, time, json, json-generator as jg
+import toga, time, json, jsongenerator as jg
 
 # Variables
 project_name = "track-it-now"
