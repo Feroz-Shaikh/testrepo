@@ -2,9 +2,7 @@
 # Imports the Google Cloud client library
 from google.cloud import pubsub_v1
 
-import toga
-import time
-
+import toga, time, json, json-generator as jg
 
 # Variables
 project_name = "track-it-now"
@@ -20,7 +18,7 @@ def publish_messages(project_name, topic_name):
     ''' Publishes multiple messages to a Pub/Sub topic. '''
 
     for n in range(1, 11):
-        data = u'Message number {}'.format(n)
+        data = json.dumps(jg.generate_datapoints(jg.gpsdata))
         # Data must be a bytestring
         data = data.encode('utf-8')
         publisher.publish(topic_path, data=data)
