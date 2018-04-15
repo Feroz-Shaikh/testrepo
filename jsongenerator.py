@@ -1,4 +1,4 @@
-import time
+from time import *
 
 gpsdata = {
   "acceleration_x": -0.3075714,
