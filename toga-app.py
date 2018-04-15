@@ -1,8 +1,10 @@
+# gcloud auth application-default login
+# Imports the Google Cloud client library
+from google.cloud import pubsub_v1
+
 import toga
 import time
 
-# Imports the Google Cloud client library
-from google.cloud import pubsub_v1
 
 # Variables
 project_name = "track-it-now"
