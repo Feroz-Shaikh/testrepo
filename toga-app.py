@@ -5,16 +5,13 @@ def send_telemetrydata(widget):
     print("Sending telemetry data")
 
 def build(app):
-    s_box = toga.Box()
     main_box = toga.Box()
 
-    s_label = toga.Label('Trackersweb')
-    s_switch = toga.Switch('Start Tracking', id='com.trackersweb.trackit.slider', on_toggle=send_telemetrydata, is_on=False)
+    main_label = toga.Label('Trackersweb.. track anything, anyscale')
+    main_button = toga.Button('Track me!', on_press=send_telemetrydata)
 
-    s_box.add(s_label)
-    s_box.add(s_switch)
-
-    main_box.add(s_box)
+    main_box.add(main_label)
+    main_box.add(main_button)
 
     return main_box
 
